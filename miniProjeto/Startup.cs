@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Helpers;
 
 namespace miniProjeto
 {
@@ -70,6 +71,12 @@ namespace miniProjeto
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Produtos}/{action=Index}/{id?}");
+
+                //endpoints.MapControllerRoute(
+                //    name: "default",
+                //    pattern: "Produtos",
+                //    defaults: new { controller = "Produtos", action = "Index" });
+
             });
         }
     }

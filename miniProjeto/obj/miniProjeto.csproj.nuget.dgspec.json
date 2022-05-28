@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projetos\\GitHub\\miniProjeto\\miniProjeto\\miniProjeto.csproj": {}
+    "D:\\projetos\\GitHub\\miniProjeto-v1.1\\miniProjeto\\miniProjeto.csproj": {}
   },
   "projects": {
-    "D:\\projetos\\GitHub\\miniProjeto\\miniProjeto\\miniProjeto.csproj": {
+    "D:\\projetos\\GitHub\\miniProjeto-v1.1\\miniProjeto\\miniProjeto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projetos\\GitHub\\miniProjeto\\miniProjeto\\miniProjeto.csproj",
+        "projectUniqueName": "D:\\projetos\\GitHub\\miniProjeto-v1.1\\miniProjeto\\miniProjeto.csproj",
         "projectName": "miniProjeto",
-        "projectPath": "D:\\projetos\\GitHub\\miniProjeto\\miniProjeto\\miniProjeto.csproj",
+        "projectPath": "D:\\projetos\\GitHub\\miniProjeto-v1.1\\miniProjeto\\miniProjeto.csproj",
         "packagesPath": "C:\\Users\\Matheus Machado\\.nuget\\packages\\",
-        "outputPath": "D:\\projetos\\GitHub\\miniProjeto\\miniProjeto\\obj\\",
+        "outputPath": "D:\\projetos\\GitHub\\miniProjeto-v1.1\\miniProjeto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Programas\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.AspNet.WebPages": {
+              "target": "Package",
+              "version": "[3.2.8, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.1, )"
