@@ -16,6 +16,48 @@ namespace miniProjeto.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
+            modelBuilder.Entity("miniProjeto.Data.Categoria", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Nome_categoria")
+                        .HasMaxLength(80)
+                        .HasColumnType("varchar(80) CHARACTER SET utf8mb4");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categoria");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Nome_categoria = "Acessorios"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Nome_categoria = "TVs"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Nome_categoria = "SmartPhones"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Nome_categoria = "Desktops"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Nome_categoria = "LapTop"
+                        });
+                });
+
             modelBuilder.Entity("miniProjeto.Data.Produto", b =>
                 {
                     b.Property<int>("Id")
@@ -42,35 +84,35 @@ namespace miniProjeto.Migrations
                         {
                             Id = 1,
                             Estoque = 10,
-                            Nome = "Caderno",
+                            Nome = "Celular Samsung",
                             Preco = 7.95m
                         },
                         new
                         {
                             Id = 2,
                             Estoque = 30,
-                            Nome = "Borracha",
+                            Nome = "TV Samsung",
                             Preco = 2.30m
                         },
                         new
                         {
                             Id = 3,
                             Estoque = 15,
-                            Nome = "Estojo",
+                            Nome = "Celular Motorola",
                             Preco = 6.40m
                         },
                         new
                         {
                             Id = 4,
                             Estoque = 20,
-                            Nome = "Lapseira",
+                            Nome = "Phone de Ouvido",
                             Preco = 3.50m
                         },
                         new
                         {
                             Id = 5,
                             Estoque = 10,
-                            Nome = "Caneta",
+                            Nome = "Carregador",
                             Preco = 3.105m
                         });
                 });

@@ -24,7 +24,8 @@ namespace miniProjeto.Controllers
             return View(await _context.Produtos.ToListAsync());
         }
 
-        // GET: Produtos/Details/5
+        // GET: Produtos/Details/5 // lista detalhamento produto
+        [HttpGet("{id}")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -42,17 +43,17 @@ namespace miniProjeto.Controllers
             return View(produto);
         }
 
-        // GET: Produtos/Create
+        // GET: Produtos/Create // cria lista de produto em branco
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Produtos/Create
+        // POST: Produtos/Create // cadastra produto
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Preco,Estoque")] Produto produto)
         {
             if (ModelState.IsValid)
@@ -64,7 +65,7 @@ namespace miniProjeto.Controllers
             return View(produto);
         }
 
-        // GET: Produtos/Edit/5
+        // GET: Produtos/Edit/5 // lista produto a ser editado
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -80,11 +81,11 @@ namespace miniProjeto.Controllers
             return View(produto);
         }
 
-        // POST: Produtos/Edit/5
+        // POST: Produtos/Edit/5 // conclui a edicao
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Preco,Estoque")] Produto produto)
         {
             if (id != produto.Id)
@@ -115,7 +116,7 @@ namespace miniProjeto.Controllers
             return View(produto);
         }
 
-        // GET: Produtos/Delete/5
+        // GET: Produtos/Delete/5 // lista produto a ser deletado
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -133,9 +134,9 @@ namespace miniProjeto.Controllers
             return View(produto);
         }
 
-        // POST: Produtos/Delete/5
+        // POST: Produtos/Delete/5 // efetua a delecao
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var produto = await _context.Produtos.FindAsync(id);
