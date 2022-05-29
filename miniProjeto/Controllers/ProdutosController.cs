@@ -25,7 +25,8 @@ namespace miniProjeto.Controllers
         }
 
         // GET: Produtos/Details/5 // lista detalhamento produto
-        [HttpGet("{id}")]
+        [Route("~/Produtos/Details/{id}")]
+        [HttpGet]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -52,6 +53,7 @@ namespace miniProjeto.Controllers
         // POST: Produtos/Create // cadastra produto
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Route("~/Produtos/Create")]
         [HttpPost]
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Preco,Estoque")] Produto produto)
@@ -84,6 +86,7 @@ namespace miniProjeto.Controllers
         // POST: Produtos/Edit/5 // conclui a edicao
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Route("~/Produtos/Edit/{id}")]
         [HttpPost]
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Preco,Estoque")] Produto produto)
@@ -135,6 +138,7 @@ namespace miniProjeto.Controllers
         }
 
         // POST: Produtos/Delete/5 // efetua a delecao
+        [Route("~/Produtos/Delete/{id}")]
         [HttpPost, ActionName("Delete")]
         //[ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
