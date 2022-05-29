@@ -25,6 +25,8 @@ namespace miniProjeto.Controllers
         }
 
         // GET: Categorias/Details/5
+        [Route("~/Categorias/Details/{id}")]
+        [HttpGet]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -51,8 +53,9 @@ namespace miniProjeto.Controllers
         // POST: Categorias/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Route("~/Categorias/Create")]
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome_categoria")] Categoria categoria)
         {
             if (ModelState.IsValid)
@@ -83,8 +86,9 @@ namespace miniProjeto.Controllers
         // POST: Categorias/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [Route("~/Categorias/Edit/{id}")]
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nome_categoria")] Categoria categoria)
         {
             if (id != categoria.Id)
@@ -134,8 +138,9 @@ namespace miniProjeto.Controllers
         }
 
         // POST: Categorias/Delete/5
+        [Route("~/Categorias/Delete/{id}")]
         [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var categoria = await _context.Categoria.FindAsync(id);
