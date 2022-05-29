@@ -22,6 +22,7 @@ API/WEB APP .NET Core 3.1 / Entity Framework / Code-first
 - EntityFramwork
 - EntityFramwork Code-First (Gera o foco no desenvolvimento da aplicação em primeiro plano, ao inves de focar na construção do banco de dados)
 - Teste com Git Actions
+- Swagger
 
 
 ## 💻 Pré-requisitos
