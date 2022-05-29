@@ -24,7 +24,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Publish
-      run: dotnet publish miniProjeto-v1.1/miniProjeto.csproj -c Release -o website
+      run: dotnet publish miniProjeto/miniProjeto.csproj -c Release -o website
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.4
       with:
