@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<miniProjeto.Data.Categoria>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista Categorias";
 }
 
 @section styles {
@@ -11,7 +11,7 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create">Cadastrar nova Categoria</a>
 </p>
 <table class="table" id="_tableListaCategorias">
     <thead>
@@ -30,9 +30,9 @@
                     @Html.DisplayFor(modelItem => item.Nome_categoria)
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhar</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
                 </td>
             </tr>
         }
