@@ -1,5 +1,5 @@
 # miniProjeto-v1.1
-API/WEB APP .NET Core 3.1 / Entity Framework / Code-first
+API/WEB APP .NET Core 3.1 / Entity Framework / Code-first / Swagger
 
 <!---Esses são exemplos. Veja https://shields.io para outras pessoas ou para personalizar este conjunto de escudos. Você pode querer incluir dependências, status do projeto e informações de licença aqui--->
 
